@@ -20,6 +20,17 @@ const port = 3000;
 
 
 
+//Ruta get de prueba
+app.get('/', (req, res) => {
+    res.send("hemos enviado la primera peticion por Get y optenido una respuesta")
+}) 
+
+
+
+
+
+
+
 
 
 
