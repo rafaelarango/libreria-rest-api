@@ -33,6 +33,13 @@ app.get('/libros', (req, res) => {
 })
 
 
+//Ruta Post
+app.post('/libros', (req, res) => {
+    console.log(req.body);
+    res.send("Ok ruta recivida ")
+})
+
+
 
 //iniciamos nuestro sservidor
 app.listen(port, () => {
