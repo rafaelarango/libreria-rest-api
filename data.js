@@ -18,5 +18,6 @@ const libros = [
             precio: "6,55 euros"
         },
 
+];
 
-]
+module.exports = libros;

@@ -1,5 +1,7 @@
 //Requerimos express
 const express = require('express');
+//Requerimos la base de datos (simulacion)
+const libros = require('./data');
 
 //ejecutamos express
 const app = express();
@@ -10,6 +12,13 @@ app.use(express.json());
 
 //configuramos nuestro puerto
 const port = 3000;
+
+
+// pruebas
+// importamos la base de datos
+//console.log(libros);
+
+
 
 
 
