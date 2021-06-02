@@ -27,6 +27,7 @@ app.get('/', (req, res) => {
     res.send("hemos enviado la primera peticion por Get y optenido una respuesta")
 }) 
 
+//Ruta get 
 app.get('/libros', (req, res) => {
     res.json(libros);
 })
