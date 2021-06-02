@@ -9,6 +9,8 @@ const app = express();
 //Configuramos el tipo de datos que vamos a soportar
 //middlewares
 app.use(express.json());
+// opcional, configuramos el orden de un json 
+app.set('json spaces', 2);
 
 //configuramos nuestro puerto
 const port = 3000;
@@ -25,14 +27,9 @@ app.get('/', (req, res) => {
     res.send("hemos enviado la primera peticion por Get y optenido una respuesta")
 }) 
 
-
-
-
-
-
-
-
-
+app.get('/libros', (req, res) => {
+    res.json(libros);
+})
 
 
 
