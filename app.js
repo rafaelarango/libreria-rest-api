@@ -35,10 +35,20 @@ app.get('/libros', (req, res) => {
 
 //Ruta Post
 app.post('/libros', (req, res) => {
-    console.log(req.body);
-    res.send("Ok ruta recivida ")
-})
+    //console.log(req.body);
+    //res.send("Ok ruta recivida ")
+    
+    const {titulo, autor, precio} = req.body;
+    if(titulo && autor && precio) {
+        const id = libros.length + 1;
+        const newLibro = {id, ...req.body};
 
+        libros.push(newLibro);
+        res.json(libros);
+    }else {
+        res.status(400).json({error: "Verificar los campos"})
+    }
+})
 
 
 //iniciamos nuestro sservidor
